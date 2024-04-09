@@ -25,4 +25,4 @@ function StatusLineFname()
 end
 
 vim.opt.winbar     = '%{v:lua.GetWinbarFname(expand("%f"))}%=%{v:lua.GetWinbarRoot()}'
-vim.opt.statusline = [[%#Title#%{v:lua.StatusLineFname()} %h%m%r %#Character#%{mode()}%#Normal#%=%<%-14.(%l,%c%V%) %P]]
+vim.opt.statusline = [[%<%#Title#%{v:lua.StatusLineFname()} %h%m%r %#Character#%{mode()} %#Normal#%=%<%-14.(%l,%c%V%) %P]]
