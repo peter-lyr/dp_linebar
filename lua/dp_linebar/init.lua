@@ -18,9 +18,9 @@ function GetWinbarFname(fname)
   WinbarRoot = ''
   fname = vim.fn.fnamemodify(fname, ':p')
   if B.is_file(fname) == 1 then
-    WinbarRoot = vim.fn['ProjectRootGet'](fname)
+    WinbarRoot = B.get_proj_root(fname)
   end
-  return B.get_relative_fname(fname, WinbarRoot)
+  return B.rep(B.get_relative_fname(fname, WinbarRoot))
 end
 
 function GetWinbarRoot()
